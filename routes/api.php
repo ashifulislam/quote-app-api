@@ -16,3 +16,8 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+//search user
+Route::get('/domain.com/api/v1/{q}', 'API\UserInfoController@search_name');
+
+
